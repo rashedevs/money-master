@@ -16,13 +16,13 @@
 
 <body>
     <header>
-        <h1 class="text-center text-info my-4">Savings Wallet</h1>
+        <h1 class="text-center text-primary mt-4 mb-5">Savings Wallet</h1>
     </header>
     <main>
-        <section class="">
+        <section class="container mx-auto">
             <div class="d-flex">
                 <div class="col-lg-6">
-                    <img src="./images/savings1.png" alt="">
+                    <img class="img-fluid" src="./images/savings1.png" alt="">
                 </div>
                 <div class="col-lg-6 text-center">
                     <div id="income-part">
@@ -30,7 +30,7 @@
                             <h4>Income</h4>
                             <br>
                             <label for="income">Income:</label> <input id="income" type="text"
-                                placeholder=" Enter amount">
+                                placeholder=" Enter income">
                         </div>
                         <br>
                         <div>
@@ -38,37 +38,40 @@
                         </div>
                         <br>
                         <div>
-                            <p><label for="food">Food:</label> <input id="food" type="text" placeholder=" Enter amount">
+                            <p><label for="food">Food:</label> <input id="food" type="text"
+                                    placeholder=" Enter food expense">
                             </p>
-                            <p><label for="rent">Rent:</label> <input id="rent" type="text" placeholder=" Enter amount">
+                            <p><label for="rent">Rent:</label> <input id="rent" type="text"
+                                    placeholder=" Enter rent expense">
                             </p>
                             <p><label for="clothes">Clothes:</label> <input id="clothes" type="text"
-                                    placeholder=" Enter amount"></p>
+                                    placeholder=" Enter clothes expense"></p>
                         </div>
                         <div>
-                            <button class="bg-primary text-white py-2 px-5 rounded">Calculate</button>
+                            <button id="calculate-btn"
+                                class="bg-primary text-white py-1 px-5 rounded">Calculate</button>
                         </div>
                     </div>
                     <br>
                     <div id="total-part">
                         <div>
-                            <h4>Total Expenses: <span id="">5500</span></h4><br>
-                            <h4>Balance: <span id="">4500</span></h4>
+                            <h4>Total Expenses: <span id="total-expense">00</span></h4><br>
+                            <h4>Balance: <span id="balance">00</span></h4>
                         </div>
                         <br>
                         <div>
-                            <p><label for="">Save:</label> <input id="" type="text" placeholder=" Enter amount"><span
-                                    class="mx-2">%</span>
-                                <button class="bg-primary text-white py-2 px-5 rounded">Save</button>
+                            <p><label for="save">Save:</label> <input id="save" type="text"
+                                    placeholder=" Enter savings"><span class="mx-2">%</span>
+                                <button id="save-btn" class="bg-primary text-white py-1 px-5 rounded">Save</button>
                             </p>
-                            <h4>Saving Amount: <span id="">2000</span></h4><br>
-                            <h4>Remaining Balance: <span id="">2500</span></h4>
+                            <h4>Saving Amount: <span id="saving-amount">00</span></h4><br>
+                            <h4>Remaining Balance: <span id="remaining-balance">00</span></h4>
                         </div>
                     </div>
                 </div>
-
         </section>
     </main>
+    <script src="./script.js"></script>
 </body>
 
 </html>
