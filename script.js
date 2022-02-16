@@ -1,55 +1,54 @@
+function getInputValue(inputId) {
+    const inputField = document.getElementById(inputId);
+    const inputAmount = parseFloat(inputField.value);
+    if (isNaN(inputAmount) || inputAmount < 0) {
+        return alert("Enter a valid amount in number");
+    }
+    return inputAmount;
+}
+function getInnerText(fieldId) {
+    const text = document.getElementById(fieldId);
+    return text;
+}
 document.getElementById('calculate-btn').addEventListener('click', function () {
-    const incomeField = document.getElementById('income');
-    const incomeAmount = parseFloat(incomeField.value);
-    // console.log(incomeAmount)
-    const foodField = document.getElementById('food');
-    const foodAmount = parseFloat(foodField.value);
-
-    const rentField = document.getElementById('rent');
-    const rentAmount = parseFloat(rentField.value);
-
-    const clothField = document.getElementById('clothes');
-    const clothAmount = parseFloat(clothField.value);
-
-    //--update total expenses 
+    const incomeAmount = getInputValue('income');
+    const foodAmount = getInputValue('food');
+    const rentAmount = getInputValue('rent');
+    const clothAmount = getInputValue('clothes');
     const totalExpenses = foodAmount + rentAmount + clothAmount;
-    const totalExpensesField = document.getElementById('total-expense');
-    const totalExpensesAmount = parseFloat(totalExpensesField.innerText);
-    totalExpensesField.innerText = totalExpenses + totalExpensesAmount;
 
-    //--update balance-----
-    const updateBalance = incomeAmount - totalExpenses;
-    const balanceField = document.getElementById('balance');
-    const totalBalanceAmount = parseFloat(balanceField.innerText);
-    const updateNewBalance = totalBalanceAmount + updateBalance;
-    balanceField.innerText = updateNewBalance;
+    if (totalExpenses > incomeAmount) {
+        alert('Your total expense should be less than your income.')
+    }
+    else {
+        //----update total expenses ---
+        let expenses = getInnerText('total-expense');
+        expenses.innerText = totalExpenses;
+        //--------update balance-------
+        const updateBalance = incomeAmount - totalExpenses;
+        const balanceField = getInnerText('balance');
+        balanceField.innerText = updateBalance;
+    }
 })
-
 document.getElementById('save-btn').addEventListener('click', function () {
-    const savingsField = document.getElementById('savings');
-    const savingsFieldRate = parseFloat(savingsField.value);
-    //--calculate savings---
-    const incomeField = document.getElementById('income');
-    const incomeAmount = parseFloat(incomeField.value);
-    const savingAmount = (incomeAmount / 100) * savingsFieldRate;
-
-    //--update saving amount---
-    const savingAmountField = document.getElementById('savings-amount');
-    const savingAmountValue = parseFloat(savingAmountField.innerText);
-    // const savingAmountValueTotal = savingAmountValue + savingAmount;
-    // savingAmountField.innerText = savingAmountValueTotal;
-    savingAmountField.innerText = savingAmount;
-
-    //----update remaining balance---
-    const balanceField = document.getElementById('balance');
-    const totalBalanceAmount = parseFloat(balanceField.innerText);
-    const newBalance = totalBalanceAmount - savingAmount;
-    //--
-    const remainingBalanceField = document.getElementById('remaining-balance');
-    // const remainingBalanceFieldValue = parseFloat(remainingBalanceField.innerText);
-    // remainingBalanceField.innerText = remainingBalanceFieldValue + newBalance;
-    remainingBalanceField.innerText = newBalance;
-
-
-
+    //-----------calculate savings------
+    const savingsRate = getInputValue('savings');
+    if (isNaN(savingsRate) || savingsRate < 0) {
+        alert('Enter a valid savings rate.')
+    }
+    else {
+        const incomeAmount = getInputValue('income');
+        const balanceField = getInnerText('balance');
+        const totalBalanceAmount = parseFloat(balanceField.innerText);
+        const savingsAmount = (incomeAmount / 100) * savingsRate;
+        if (savingsAmount > totalBalanceAmount) { alert('Not enough balance.') }
+        else {//--update saving amount------
+            const savingAmountField = getInnerText('savings-amount');
+            savingAmountField.innerText = savingsAmount;
+            const newBalance = totalBalanceAmount - savingsAmount;
+            //---update remaining balance---
+            const remainingBalanceField = getInnerText('remaining-balance');
+            remainingBalanceField.innerText = newBalance;
+        }
+    }
 })
