@@ -1,14 +1,18 @@
+/* document default style */
 .body{
     margin: 0;
     padding: 0;
 }
+/* title header background color */
 .header-title{
     color: rgba(66, 74, 236, 0.97);
 }
+/* image size */
 .banner-image{
     height: 784px;
     width: 750px;
 }
+/* input field background color */
 .input-field{
     background-color: rgba(206, 199, 204, 0.54);
 }
