@@ -5,7 +5,7 @@
 }
 /* title header background color */
 .header-title{
-    color: rgba(66, 74, 236, 0.97);
+    color: #0D6EFD;
 }
 /* image size */
 .banner-image{
@@ -15,5 +15,9 @@
 /* input field background color */
 .input-field{
     background-color: rgba(206, 199, 204, 0.54);
+}
+.sub-title{
+    color: #0D6EFD;
+    font-weight: 700;
 }
 #savings{width: 75px;}
