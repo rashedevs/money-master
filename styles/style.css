@@ -6,9 +6,10 @@
     color: rgba(66, 74, 236, 0.97);
 }
 .banner-image{
-    height: 736px;
+    height: 848px;
     width: 750px;
 }
 .input-field{
     background-color: rgba(206, 199, 204, 0.54);
 }
+#savings{width: 65px;}
