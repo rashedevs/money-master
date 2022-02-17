@@ -15,82 +15,77 @@
 
 <body>
     <header>
-        <h1 class="header-title text-center fw-bold bg-light my-3 py-3">Savings Wallet</h1>
+        <h1 class="header-title text-center fw-bold bg-light py-3">Savings Wallet</h1>
     </header>
     <main>
-        <div class="">
-            <div class="row bg-gradient d-flex align-items-center m-5">
-                <div class="col-lg-7 col-md-6 col-sm-12">
-                    <img class="banner-image img-fluid rounded mx-auto d-block" src="./images/savings1.png" alt="">
-                </div>
-                <div class="col-lg-5 col-md-6 col-sm-12 bg-light p-5 rounded">
-                    <div class="">
-                        <div class="text-center">
-                            <h4>Income</h4>
-                            <div class="form-group row my-3">
-                                <label for="income" class="col-sm-2 col-form-label py-3">Income:</label>
-                                <div class="col-sm-10">
-                                    <input id="income" type="text" class="input-field form-control py-3"
-                                        placeholder="Enter your income.">
-                                </div>
-                            </div>
-                            <div>
-                                <h4>Expenses</h4>
-                            </div>
-                            <div>
-                                <div class="form-group row my-4">
-                                    <label for="food" class=" col-sm-2 col-form-label py-3">Food:</label>
-                                    <div class="col-sm-10">
-                                        <input id="food" type="text" class="input-field form-control py-3"
-                                            placeholder="Enter food expenses.">
-                                    </div>
-                                </div>
-                                <div class="form-group row my-4">
-                                    <label for="rent" class=" col-sm-2 col-form-label py-3">Rent:</label>
-                                    <div class="col-sm-10">
-                                        <input id="rent" type="text" class="input-field form-control py-3"
-                                            placeholder="Enter clothes expenses.">
-                                    </div>
-                                </div>
-                                <div class="form-group row my-4">
-                                    <label for="clothes" class=" col-sm-2 col-form-label py-3">Clothes:</label>
-                                    <div class="col-sm-10">
-                                        <input id="clothes" type="text" class="input-field form-control py-3"
-                                            placeholder="Enter clothes expenses.">
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="my-3">
-                                <button id="calculate-btn" type="submit"
-                                    class="btn btn-primary px-5 py-3">Calculate</button>
+        <div class="row bg-gradient d-flex align-items-center m-5">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <img class="banner-image img-fluid rounded mx-auto d-block" src="./images/savings1.png" alt="">
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12 bg-light p-3 rounded">
+                <div class="text-center">
+                    <h4>Income</h4>
+                    <div class="form-group row my-3">
+                        <label for="income" class="col-sm-2 col-form-label py-3">Income:</label>
+                        <div class="col-sm-10">
+                            <input id="income" type="text" class="input-field form-control py-3"
+                                placeholder="Enter your income.">
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Expenses</h4>
+                    </div>
+                    <div>
+                        <div class="form-group row my-4">
+                            <label for="food" class=" col-sm-2 col-form-label py-3">Food:</label>
+                            <div class="col-sm-10">
+                                <input id="food" type="text" class="input-field form-control py-3"
+                                    placeholder="Enter food expenses.">
                             </div>
                         </div>
-                        <div class="text-center">
-                            <div>
-                                <h4 class="my-3">Total Expenses: <span id="total-expense">0</span></h4>
-                                <h4>Balance: <span id="balance">0</span></h4>
+                        <div class="form-group row my-4">
+                            <label for="rent" class=" col-sm-2 col-form-label py-3">Rent:</label>
+                            <div class="col-sm-10">
+                                <input id="rent" type="text" class="input-field form-control py-3"
+                                    placeholder="Enter clothes expenses.">
                             </div>
-                            <div>
-                                <div class=" row my-3">
-                                    <div class="savings-field d-flex justify-content-center">
-                                        <div><label for="savings" class=" col-form-label py-3 mx-2">Save:</label>
-                                        </div>
-                                        <div class=""><input id="savings" type="text"
-                                                class="input-field form-control py-3" placeholder="Enter saving.">
-                                        </div>
-                                        <div>
-                                            <p class="py-3 mx-2"> %</p>
-                                        </div>
-                                        <div><button id="save-btn" type="submit"
-                                                class="btn btn-primary px-5 py-3">Save</button>
-                                        </div>
-                                    </div>
+                        </div>
+                        <div class="form-group row my-4">
+                            <label for="clothes" class=" col-sm-2 col-form-label py-3">Clothes:</label>
+                            <div class="col-sm-10">
+                                <input id="clothes" type="text" class="input-field form-control py-3"
+                                    placeholder="Enter clothes expenses.">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="my-3">
+                        <button id="calculate-btn" type="submit" class="btn btn-primary px-5 py-3">Calculate</button>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div>
+                        <h4 class="my-3">Total Expenses: <span id="total-expense">0</span></h4>
+                        <h4>Balance: <span id="balance">0</span></h4>
+                    </div>
+                    <div>
+                        <div class=" row my-3">
+                            <div class="savings-field d-flex justify-content-center">
+                                <div><label for="savings" class=" col-form-label py-3 mx-2">Save:</label>
                                 </div>
-                                <h4 class="my-3">Saving Amount: <span id="savings-amount">0</span></h4>
-                                <h4>Remaining Balance: <span id="remaining-balance">0</span></h4>
+                                <div class=""><input id="savings" type="text" class="input-field form-control py-3"
+                                        placeholder="Enter saving.">
+                                </div>
+                                <div>
+                                    <p class="py-3 mx-2"> %</p>
+                                </div>
+                                <div><button id="save-btn" type="submit" class="btn btn-primary px-5 py-3">Save</button>
+                                </div>
                             </div>
                         </div>
+                        <h4 class="my-3">Saving Amount: <span id="savings-amount">0</span></h4>
+                        <h4>Remaining Balance: <span id="remaining-balance">0</span></h4>
                     </div>
                 </div>
     </main>
