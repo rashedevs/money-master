@@ -2,9 +2,10 @@ function getInputValue(inputId) {
     const inputField = document.getElementById(inputId);
     const inputAmount = parseFloat(inputField.value);
     if (isNaN(inputAmount) || inputAmount < 0) {
-        return alert("Enter a valid amount in number");
+        alert("Enter a valid amount in number");
+        return;
     }
-    return inputAmount;
+    else { return inputAmount; }
 }
 function getInnerText(fieldId) {
     const text = document.getElementById(fieldId);
@@ -18,11 +19,14 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     const totalExpenses = foodAmount + rentAmount + clothAmount;
 
     if (totalExpenses > incomeAmount) {
-        alert('Your total expense should be less than your income.')
+        alert('Your total expense should be less than your income.');
+    }
+    else if (isNaN(incomeAmount) || isNaN(totalExpenses)) {
+        alert('Invalid input.');
     }
     else {
         //----update total expenses ---
-        let expenses = getInnerText('total-expense');
+        const expenses = getInnerText('total-expense');
         expenses.innerText = totalExpenses;
         //--------update balance-------
         const updateBalance = incomeAmount - totalExpenses;
