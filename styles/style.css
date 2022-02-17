@@ -1,0 +1,14 @@
+.body{
+    margin: 0;
+    padding: 0;
+}
+.header-title{
+    color: rgba(66, 74, 236, 0.97);
+}
+.banner-image{
+    height: 736px;
+    width: 750px;
+}
+.input-field{
+    background-color: rgba(206, 199, 204, 0.54);
+}
